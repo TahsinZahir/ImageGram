@@ -5,5 +5,6 @@ import { AWS_ACCESS_KEY_ID, AWS_REGION, AWS_SECRET_ACCESS_KEY } from './serverCo
      region: AWS_REGION,
      accessKeyId: AWS_ACCESS_KEY_ID,
      secretAccessKey: AWS_SECRET_ACCESS_KEY,
+     endpoint: `https://s3.${AWS_REGION}.amazonaws.com`, 
  });
  
