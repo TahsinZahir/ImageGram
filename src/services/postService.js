@@ -1,8 +1,7 @@
-import { countAllPosts, createPost, deletePostById, findAllPosts, findPostById, updatePostById } from "../repositories/postRepository.js";
+import { countAllPosts, createPost, deletePostById, findAllPosts, updatePostById } from "../repositories/postRepository.js";
 
 export const createPostService = 
 
-// 1.take the image of the post and upload on aws 2.Get url of the image from aws response 3.Create a post with the captain and the image url in the db using repository 4. Return the post object
 async (createPostObejct) => {
     const caption = createPostObejct.caption?.trim();
     const image = createPostObejct.image;
