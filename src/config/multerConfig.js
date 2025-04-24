@@ -23,4 +23,4 @@ import multer from "multer";
              cb(null, file.fieldname + "-" + uniqueSuffix + "." + file.mimetype.split("/")[1]);
          }
      })
- }); // uploader is a middleware
+ }); 

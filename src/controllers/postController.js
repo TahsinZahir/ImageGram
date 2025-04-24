@@ -22,11 +22,6 @@ export async function createPost(req, res) {
          message: "Post created successfully",
          data: post
      });
-     return res.status(201).json({
-        success: true,
-        message: "Post created successfully",
-        data: post
-    });
 }
 
 
