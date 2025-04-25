@@ -13,7 +13,7 @@
  
  router.get('/', getAllPosts);
 
- router.delete('/:id', deletePost);
+ router.delete('/:id', isAuthenticated, deletePost);
  
  router.put('/:id', s3uploader.single('image'), updatePost);
  

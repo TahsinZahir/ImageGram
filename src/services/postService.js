@@ -1,4 +1,4 @@
-import { countAllPosts, createPost, deletePostById, findAllPosts, updatePostById } from "../repositories/postRepository.js";
+import { countAllPosts, createPost, deletePostById, findAllPosts, findPostById, updatePostById } from "../repositories/postRepository.js";
 
 export const createPostService = 
 
@@ -29,6 +29,12 @@ export const getAllPostsService = async (offset, limit) => {
 export const deletePostService = async (id, user) => {
     // call the repository function
     const post = await findPostById(id);
+    if (!post) {
+        throw {
+            status: 404,
+            message: "Post not found"
+        };
+    }
     if(post.user != user) {
         throw {
             status: 401,
