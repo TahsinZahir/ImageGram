@@ -39,7 +39,7 @@ import { generateJwtToken } from "../utils/jwt.js";
       }
   }
 
-  const token = generateJwtToken({ email: user.email, _id: user._id, username: user.username });
+  const token = generateJwtToken({ email: user.email, _id: user._id, username: user.username, role: user.role || "user"  });
 
   return token;
 
