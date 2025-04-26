@@ -9,6 +9,15 @@
  import { zodPostSchema } from '../../validators/zodPostSchema.js';
  import { isAdmin, isAuthenticated } from '../../middlewares/authMiddleware.js';
  const router = express.Router(); // Router object to modularize the routes
+
+ /**
+  * @swagger
+  * /posts:
+  *  post:
+  *      summary: Create a new post
+  *      description: Create a new post
+  * 
+  */
  router.post('/', isAuthenticated,  s3uploader.single('image'), validate(zodPostSchema), createPost);
  
  router.get('/', getAllPosts);
